@@ -175,16 +175,24 @@ def carga():
                 if valido != True:
                     auxiliar = ''
                 x = x + 1
-            elif ord(actual) == 10:
-                nodo = Nodo(auxiliar)
-                afectados.Agregar(nodo)
-                state = 10
-                auxiliar = ''
-                valido = False
+            elif ord(actual) == 10 :
+                if mensaje[x-1] != ',':
+                    nodo = Nodo(auxiliar)
+                    afectados.Agregar(nodo)
+                    state = 10
+                    auxiliar = ''
+                    valido = False
+                    x = x + 1
+                else:
+                    auxiliar = ''
+                    valido = False
+                    x = x + 1
             elif actual == ',':
                 valido = False
                 nodo = Nodo(auxiliar)
                 afectados.Agregar(nodo)
+                x = x + 1
+            elif ord(actual) == 9:
                 x = x + 1
             else:
                 if actual == '@':
