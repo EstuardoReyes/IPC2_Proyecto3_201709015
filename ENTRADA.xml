@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EVENTOS>
+	<EVENTO>
+		Guatemala, 20/04/2021
+		Reportado por: < "bart" bart@ing.usac.edu.gt>
+		Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt
+		Error: 20001 - Desbordamiento de búfer de memoria RAM
+		en el servidor de correo electrónico.
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 20/04/2021
+		Reportado por: homero@ing.usac.edu.gt
+		Usuarios afectados: <bart@ing.usac.edu.gt>, lisa@ing.usac.edu.gt
+		Error: 20002 - Error de destino, momento equivocado,
+		lugar equivocado y medios equivocados
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 25/04/2021
+		Reportado por: <barni@ing.usac.edu.gt>
+		Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt, 
+		moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
+		Error: 20003 - Sobrecarga de informacion
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 25/04/2021
+		Reportado por: <"Lisa" lisa@ing.usac.edu.gt>
+		Usuarios afectados: moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
+		Error: 20002 - Error de destino, momento equivocado,
+		lugar equivocado y medios equivocados
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 30/04/2021
+		Reportado por: mrburns@ing.usac.edu.gt
+		Usuarios afectados: apu@ing.usac.edu.gt, ned@ing.usac.edu.gt,
+		edna@ing.usac.edu.gt, moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
+		Error: 20004 - Demasiados registros enviados,
+		no hay suficiente espacio de almacenamiento.
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 30/04/2021
+		Reportado por: milhouse@ing.usac.edu.gt
+		Usuarios afectados: homero@ing.usac.edu.gt, <lisa@ing.usac.edu.gt>,
+		bart@ing.usac.edu.gt, moe@ing.usac.edu.gt
+		Error: 20003 - Sobrecarga de informacion
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 20/04/2021
+		Reportado por: <"Nelson" nelson@ing.usac.edu.gt>
+		Usuarios afectados: edna@ing.usac.edu.gt, bart@ing.usac.edu.gt
+		Error: 20001 - Desbordamiento de búfer de memoria RAM
+		en el servidor de correo electrónico.
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 25/04/2021
+		Reportado por: <nelson@ing.usac.edu.gt>
+		Usuarios afectados: <moe@ing.usac.edu.gt>, <bart@ing.usac.edu.gt>
+		Error: 20003 - Sobrecarga de informacion
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 20/04/2021
+		Reportado por: Ralph321@ing.usac.edu.gt
+		Usuarios afectados: bart@ing.usac.edu.gt, lisa@ing.usac.edu.gt,
+		moe@ing.usac.edu.gt, skinner@ing.usac.edu.gt
+		Error: 20004 - Demasiados registros enviados,
+		no hay suficiente espacio de almacenamiento.
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 30/04/2021
+		Reportado por: <Ralph321@ing.usac.edu.gt>
+		Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt
+		Error: 20001 - Desbordamiento de búfer de memoria RAM
+		en el servidor de correo electrónico.
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 9/05/2021
+		Reportado por: <ejemplo@ing.usac.edu.gt>
+		Usuarios afectados: martin@ing.usac.edu.gt, maggy@ing.usac.edu.gt
+		Error: 20001 - Desbordamiento de búfer de memoria RAM
+		en el servidor de correo electrónico.
+	</EVENTO>
+	<EVENTO>
+		Guatemala, 25/04/2021
+		Reportado por: nelson@ing.usac.edu.gt
+		Usuarios afectados: <moe@ing.usac.edu.gt>, bart@ing.usac.edu.gt
+		Error: 20004 - Peticion no reconocida por el servidor,
+		not found error.
+	</EVENTO>
+</EVENTOS>

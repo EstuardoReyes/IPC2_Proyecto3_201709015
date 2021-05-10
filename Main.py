@@ -12,10 +12,10 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 import xml.dom.minidom
 from xml.etree import ElementTree
-from graphviz import Digraph
 import os
 from Nodo import Nodo
 from Lista import Lista
+from Evento import Evento
 
 eventos = Lista()
 
@@ -64,8 +64,7 @@ def carga():
     root.wm_attributes("-topmost", 1)
     archivo = askopenfilename(filetypes =(("Archivo XML", "*.xml"),("Todos Los Archivos","*.*")),title = "Busque su archivo.")
     root.update()
-    root.destroy()
-    print(archivo)    
+    root.destroy()  
     f = open (archivo,"r") 
     mensaje = f.read()  
     Texto1.config(state='normal')
@@ -77,7 +76,7 @@ def carga():
     state = 0
     auxiliar = ''
     palabra = ''
-    while(auxiliar != "/EVENTOS"):
+    while(True):
         actual = mensaje[x]
         if state == 0:
             if actual == '<':
@@ -86,10 +85,15 @@ def carga():
             else:
                 x = x + 1
         elif state == 1:   #analiza la palabra inicial
-            if actual == '>' and auxiliar == 'EVENTOS':
-                state = 2
-                auxiliar = ''
-                x = x + 1
+            if actual == '>' :
+                if auxiliar =='EVENTOS':
+                    state = 2
+                    auxiliar = ''
+                    x = x + 1
+                else:
+                    state = 0 
+                    x = x + 1
+                    auxiliar = ''
             else:
                 auxiliar = auxiliar + actual
                 x = x + 1 
@@ -109,8 +113,10 @@ def carga():
                     afectados = Lista()
                     error = ''
                     x = x + 1
-                    print("encontro evento")
+                elif auxiliar == '/EVENTOS':
+                    break
                 else:
+                    auxiliar = ''
                     state = 2
                     x = x + 1
             else:
@@ -119,6 +125,7 @@ def carga():
         elif state == 4: #empieza a analizar en todos los eventos
             if actual == ',':
                 state = 5
+                x = x + 1
             else:
                 x = x + 1
         elif state == 5: #analiza la fecha
@@ -191,25 +198,21 @@ def carga():
             else:
                 x = x + 1
         elif state == 11 :
-            if ord(actual) >= 48 or ord(actual) <= 57:
+            if ord(actual) >= 48 and ord(actual) <= 57:
                 auxiliar = auxiliar + actual
                 x = x + 1
-            elif ord(actual) == 10:
+            elif actual == '-':
                 error = auxiliar
                 state = 2
                 auxiliar = ''  
-                print(fecha)
-                print(reportado)
-                afectados.Imprimir()
-                print(error)   
+                nodo = Evento(fecha,reportado,afectados,error)
+                nodos = Nodo(nodo)
+                eventos.Agregar(nodos) 
+                x = x + 1     
             else:
                 x = x + 1
     print("salio")
-
-
-
-
-
+    eventos.Print()
 
 
     

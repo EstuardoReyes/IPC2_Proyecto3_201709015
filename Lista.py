@@ -44,8 +44,21 @@ class Lista():
     def Imprimir(self):
         aux = self.primero
         while(aux != None):
-            print(aux.identificador)
+            print(aux.dato)
             aux = aux.siguiente
+
+    def Print(self):
+        aux = self.primero
+        x = 1
+        while(aux != None):
+            print(x)
+            print(aux.dato.fecha)
+            print(aux.dato.reportado)
+            aux.dato.afectado.Imprimir()
+            print(aux.dato.error)
+            aux = aux.siguiente
+            x = x + 1
+
 
     def ExisteNodo(self,identificador, tipo):
         aux = self.primero
